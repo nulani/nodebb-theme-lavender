@@ -46,9 +46,7 @@
 						<div component="category/posts" class="post-preview clearfix">
 							<strong><a href="{config.relative_path}/topic/{categories.posts.topic.slug}">{categories.posts.topic.title}</a></strong>
 							<hr/>
-							<a style="color: {categories.color};" href="<!-- IF categories.posts.user.userslug -->{config.relative_path}/user/{categories.posts.user.userslug}<!-- ELSE -->#<!-- ENDIF categories.posts.user.userslug-->">
-								<img src="{categories.posts.user.picture}" title="{categories.posts.user.username}" class="pull-left user-img" />
-							</a>
+						
 							<div class="post-preview-content">
 
 								<div class="content">
@@ -58,6 +56,9 @@
 							</div>
 
 							<span class="pull-right post-preview-footer">
+								<a style="color: {categories.color};" href="<!-- IF categories.posts.user.userslug -->{config.relative_path}/user/{categories.posts.user.userslug}<!-- ELSE -->#<!-- ENDIF categories.posts.user.userslug-->">
+								<img src="{categories.posts.user.picture}" title="{categories.posts.user.username}" class="pull-left user-img" />
+							        </a>
 								<span class="timeago" title="{categories.posts.relativeTime}"></span> &bull;
 								<a href="{config.relative_path}/topic/{categories.posts.topic.slug}<!-- IF categories.posts.index -->/{categories.posts.index}<!-- ENDIF categories.posts.index -->">[[global:read_more]]</a>
 							</span>
